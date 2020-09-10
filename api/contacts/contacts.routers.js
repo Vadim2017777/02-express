@@ -10,8 +10,10 @@ const {
   patchContact,
 } = require("./contacts.controller");
 
-module.exports = userRouter.get("/contacts", listContacts);
-module.exports = userRouter.get("/contacts/:contactId", findContact);
-module.exports = userRouter.post("/contacts", addContacts);
-module.exports = userRouter.delete("/contacts/:contactId", deleteContacts);
-module.exports = userRouter.patch("/contacts/:contactId", patchContact);
+userRouter.get("/contacts", listContacts);
+userRouter.get("/contacts/:contactId", findContact);
+userRouter.post("/contacts", addContacts);
+userRouter.delete("/contacts/:contactId", deleteContacts);
+userRouter.patch("/contacts/:contactId", patchContact);
+
+module.exports = userRouter;
